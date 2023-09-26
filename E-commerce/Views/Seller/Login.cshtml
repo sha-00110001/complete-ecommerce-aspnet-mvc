@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+@if (ViewBag.Notification != null)
+{
+    <div class="alert alert-danger">@ViewBag.Notification</div>
+}
+
+
+<div class="row" >
+    <div class="col-md-6 offset-3">
+       
+
+        <div class="row" style=" border-style: solid; border-color:gray; border-radius:10px; border-width:1px ">
+            <div class="col-md-8 offset-2">
+                <p>
+                    <h3>Login</h3>
+                </p>
+
+                <form method="Post" action="/Seller/Login/">
+                  
+
+
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" class="form-control" required>
+                    </div>
+                    <br />
+                    <button type="submit" class="btn btn-primary">Login</button>
+
+                </form>
+               
+                <div>
+                    <a class="btn btn-outline-secondary" asp-controller="Seller" asp-action="Register">Register</a>
+                    <a class="btn btn-outline-secondary" asp-controller="User" asp-action="Index">Cancel</a>
+                </div>
+                <br />
+            </div>
+        </div>
+    </div>
+</div>
+<br /><br /><br />
+
+
+
+
